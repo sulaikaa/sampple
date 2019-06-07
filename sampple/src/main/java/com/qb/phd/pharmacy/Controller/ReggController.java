@@ -1,6 +1,10 @@
 package com.qb.phd.pharmacy.Controller;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,5 +24,10 @@ public class ReggController {
 	public Regg createuser(@RequestBody Regg r) {
 		Regg rg= rd.save(r);
 		return rg;
+	}
+	
+	@GetMapping("/get")
+	public Optional<Regg> getuser(@PathVariable("id") long id){
+		return rd.findById(id);
 	}
 }
