@@ -26,8 +26,5 @@ public class ReggController {
 		return rg;
 	}
 	
-	@GetMapping("/get")
-	public Optional<Regg> getuser(@PathVariable("id") long id){
-		return rd.findById(id);
-	}
+	
 }
