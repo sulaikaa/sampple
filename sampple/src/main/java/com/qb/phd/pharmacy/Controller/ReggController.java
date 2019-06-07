@@ -18,6 +18,7 @@ public class ReggController {
 	
 	@PostMapping("/create")
 	public Regg createuser(@RequestBody Regg r) {
-		return rd.save(r);
+		Regg rg= rd.save(r);
+		return rg;
 	}
 }
