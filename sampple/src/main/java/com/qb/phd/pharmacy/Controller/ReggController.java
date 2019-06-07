@@ -18,11 +18,11 @@ import com.qb.phd.pharmacy.model.Regg;
 public class ReggController {
 
 	@Autowired
-	ReggDao rd;
+	ReggDao regd;
 	
 	@PostMapping("/create")
 	public Regg createuser(@RequestBody Regg r) {
-		Regg rg= rd.save(r);
+		Regg rg= regd.save(r);
 		return rg;
 	}
 	
